@@ -2,9 +2,14 @@
 
 namespace SwiffyParser\Result;
 
-use SwiffyParser\ExtractorInput;
+use SwiffyParser\Result;
 
-class StringResult implements ExtractorInput {
+/**
+ * Class StringResult
+ * @package SwiffyParser\Result
+ * @author Athlan
+ */
+class StringResult implements Result {
 
     /**
      * @var string
@@ -20,7 +25,7 @@ class StringResult implements ExtractorInput {
      * @param string $result
      */
     public function __construct($result) {
-        $this->result;
+        $this->result = $result;
         $this->eof = false;
     }
 

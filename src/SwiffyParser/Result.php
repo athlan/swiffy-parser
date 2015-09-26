@@ -2,6 +2,11 @@
 
 namespace SwiffyParser;
 
+/**
+ * Interface Result
+ * @package SwiffyParser
+ * @author Athlan
+ */
 interface Result {
 
     /**

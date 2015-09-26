@@ -2,6 +2,11 @@
 
 namespace SwiffyParser;
 
+/**
+ * Interface ExtractorInput
+ * @package SwiffyParser
+ * @author Athlan
+ */
 interface ExtractorInput {
 
     /**

@@ -1,9 +1,17 @@
 <?php
 
-namespace SwiffyParser;
+namespace SwiffyParser\Extractor;
 
+use SwiffyParser\Extractor;
+use SwiffyParser\ExtractorInput;
+use SwiffyParser\Result;
 use SwiffyParser\Result\StringResult;
 
+/**
+ * Class HtmlExtractor
+ * @package SwiffyParser\Extractor
+ * @author Athlan
+ */
 class HtmlExtractor implements Extractor {
     /**
      * @param $input ExtractorInput
@@ -11,12 +19,18 @@ class HtmlExtractor implements Extractor {
      */
     public function extract(ExtractorInput $input)
     {
-        $string = '';
+        $buffer = '';
         while(!$input->isEof()) {
-            $string .= $input->getStream();
+            $buffer .= $input->getStream();
         }
 
-        $result = new StringResult($string);
+        $matchResult = preg_match('#<script>(.*?)swiffyobject = ({(.+)});(.*?)</script>#is', $buffer, $match);
+
+        if(!$matchResult) {
+            return null;
+        }
+
+        $result = new StringResult($match[2]);
         return $result;
     }
 

@@ -1,9 +1,14 @@
 <?php
 
-namespace SwiffyParser\Result;
+namespace SwiffyParser\ExtractorInput;
 
 use SwiffyParser\ExtractorInput;
 
+/**
+ * Class StringInput
+ * @package SwiffyParser\ExtractorInput
+ * @author Athlan
+ */
 class StringInput implements ExtractorInput {
 
     /**
@@ -20,7 +25,7 @@ class StringInput implements ExtractorInput {
      * @param string $input
      */
     public function __construct($input) {
-        $this->input;
+        $this->input = $input;
         $this->eof = false;
     }
 
