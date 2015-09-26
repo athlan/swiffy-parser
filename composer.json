@@ -1,0 +1,17 @@
+{
+  "name": "athlan/swiffy-parser",
+  "description": "Swiffy flash content extractor",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Athlan",
+      "email": "me@athlan.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SwiffyParser\\": "src/"
+    }
+  }
+}
