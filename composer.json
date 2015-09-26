@@ -9,6 +9,12 @@
       "email": "me@athlan.pl"
     }
   ],
+  "repositories" : [
+    {
+      "type": "vcs",
+      "url": "https://github.com/athlan/swiffy-parser.git"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "SwiffyParser\\": "src/"
